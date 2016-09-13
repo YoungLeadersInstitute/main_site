@@ -18,9 +18,9 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
-
 <link href="https://fonts.googleapis.com/css?family=Dosis|Poppins:300" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans|Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 <link rel="stylesheet"href="homepage.css">
 
@@ -44,10 +44,13 @@ console.log("Hello")
       </a>
     </div>
 <div class="navbar-nav">
-  <a class="nav_names" href="homepage.html">Home</a>
-  <a class="nav_names" href="#">About</a>
-  <a class="nav_names" href="#">Register</a>
-  <a class="nav_names" href="#">Contact</a>
+  <a class="nav_names" href="#"></a>
+  <a class="nav_names" href="#"></a>
+  <a class="nav_names" href="#"></a>
+  <a class="nav_names" href="homepage.html">HOME</a>
+  <a class="nav_names" href="#about">ABOUT</a>
+  <a class="nav_names" href="#register">REGISTER</a>
+  <a class="nav_names" href="#contact">CONTACT</a>
 </div>
 
   <div class="navbar-nav navbar-right">
@@ -56,32 +59,11 @@ console.log("Hello")
   </div>
 
 </nav>
-<!-- <div id="navbar">
-<nav class="navbar navbar-fixed-top navbar-transparent" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="homepage.html">
-        <span id="title">
-          <span id="Y">Y</span>oung
-          <span id="L">L</span>eaders
-        </span>
-          <br>
-          <span id="under_title">I N S T I T U T E</span>
-      </a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="homepage.html"><span id="nav_names">Home</span></a></li>
-      <li><a href="#"><span id="nav_names"><span id="nav_names">About</span></span></a></li>
-      <li><a href="#"><span id="nav_names">Register</span></a></li>
-      <li><a href="#"><span id="nav_names">Contact</span></a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user" style="color:white"></span>  <span id="nav_names">Sign Up</span></a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in" style="color:white"></span>  <span id="nav_names">Login</span></a></li>
-    </ul>
-  </div>
-</nav>
-</div> -->
+
+<!-- <nav class="navbar navbar-fixed-top navbar-transparent" role="navigation"> -->
+
+
+
 <!--  -->
 
 <!-- TITLE PIC -->
@@ -91,8 +73,64 @@ console.log("Hello")
 </div>
 <!--  -->
 
+<!-- CHEVRON DOWN BUTTON -->
+
+<div id="down_chevron" class="btn glyphicon glyphicon-chevron-down" style="color:white" type="button" onclick="smoothScroll(document.getElementById('about'))"></div>
+
+  <script>
+  window.smoothScroll = function(target) {
+  var scrollContainer = target;
+  do { //find scroll container
+      scrollContainer = scrollContainer.parentNode;
+      if (!scrollContainer) return;
+      scrollContainer.scrollTop += 1;
+  } while (scrollContainer.scrollTop == 0);
+
+  var targetY = 0;
+  do { //find the top of target relatively to the container
+      if (target == scrollContainer) break;
+      targetY += target.offsetTop;
+  } while (target = target.offsetParent);
+
+  scroll = function(c, a, b, i) {
+      i++; if (i > 30) return;
+      c.scrollTop = a + (b - a) / 30 * i;
+      setTimeout(function(){ scroll(c, a, b, i); }, 20);
+  }
+  // start scrolling
+  scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+  </script>
+</div>
+<!--  -->
 
 <div id="spaces"></div>
+
+<!-- ABOUT -->
+<h3 id="about_title">
+  <span id="about"> &nbsp; </span>
+  ABOUT
+</h3>
+<div class="block"></div>
+
+<p id="about_p"class="blocktext">
+  Young Leaders Institute is a unique youth leadership platform and network connector designed to empower and equip young people
+   with extraordinary leadership skills to boost their confidence and help put them on a trajectory of academic excellence. We provide
+    an open, safe environment for students to focus on their strengths and redirect their talents toward finding their passion, their
+     purpose and their true, best self. Through introspective, comprehensive trainings and mind-shifting exercises, students gain a
+ profound sense of confidence and walk away with a multitude of tools that will enable them to unleash their greatest potential,
+  as they are inspired to take on new leadership roles. Students will rise with a new global outlook as they are empowered to become
+   the social innovators and agents of change that will transform their communities and the world around them.
+  <br></br>
+  As we work toward building a more just and inclusive society, Young Leaders Institute is unequivocally committed to ensuring that all youth,
+  including those who live in urban, underserved areas, have an opportunity to be trained and receive equal opportunity and access to the same
+  resources as their affluent contemporaries. Young Leaders Institute provides a healthy, dynamic network for students to stay connected as they
+  continue to engage with the trainers, mentors and other like-minded social innovators to become the leaders they are capable of being TODAY!
+ </p>
+<!--  -->
+
+<div id="spaces"></div>
+
 <!-- THUMBNAIL CAROUSAL -->
 <div class="container">
 	<div class="row">
@@ -154,6 +192,54 @@ console.log("Hello")
   </script>
 </div>
 <!--  -->
+
+
+
+
+
+
+
+
+
+
+<!-- EXTRA -
+------------------------>
+<!-- CONTACT -->
+<!-- <section id="contact">
+  <div class="container">
+    <h1>Contact</h1>
+    <div class="block2"></div>
+    <form>
+      <div class="row">
+        <div class="six columns">
+          <label for="exampleRecipientInput">Name</label>
+          <input class="u-full-width" type="text">
+        </div>
+        <div class="six columns">
+          <label for="exampleEmailInput">Email</label>
+          <input class="u-full-width" type="email">
+        </div>
+      </div>
+      <div class="row">
+        <label for="exampleMessage">Message</label>
+        <textarea class="u-full-width"></textarea>
+        <input class="button-primary" type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</section> -->
+<!-- Footer Section-->
+<!-- <footer>
+  <div class="container">
+    <div class="nine columns">
+      <p>@2016 Young Leaders Institute</p>
+    </div>
+    <div class="three columns"> <span class="typcn typcn-social-facebook-circular socialIcons"></span> <span class="typcn typcn-social-instagram-circular socialIcons"></span> <span class="typcn typcn-social-google-plus-circular socialIcons"></span> <span class="typcn typcn-social-linkedin-circular socialIcons"></span> </div>
+  </div>
+</footer> -->
+
+
+
 
 
 </body>

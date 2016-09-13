@@ -1,11 +1,12 @@
 /*font-family: 'EB Garamond', serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;*/
+/*font-family: 'Raleway', sans-serif;*/
 
 /*TITLE*/
 #title{
   font-family: 'EB Garamond', serif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 40px;
   color: #FFFFFF;
 }
@@ -31,17 +32,20 @@ nav {
   /*margin-top: 40px;*/
   padding: 30px;
   text-align: center;
-  box-shadow: 2px 2px 8px rgba(o, 0, 0, 1);
+  background: rgba(0, 0, 0, 0.45);
+
+
+
 }
 #nav-1 {
-  background-color: transparent;
+  /*background-color: transparent;*/
 }
 
 .nav_names{
   transition: 0.3s ease;
   background-color:transparent;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
   padding: 20px 0;
   margin: 0 20px;
@@ -57,7 +61,6 @@ nav {
 
 
 
-
 /*HOMEPAGE IMG*/
 .title_img{
   position: relative;
@@ -65,9 +68,9 @@ nav {
 }
 #title_pic{
   width: 100%;
-  height: 650px;
-  opacity: 50%;
-  filter: sepia(5%);
+  height: 745px;
+  /*opacity: 50%;
+  filter: sepia(5%);*/
   vertical-align: baseline;
 }
 h2 {
@@ -82,16 +85,68 @@ h2 {
    /*border-radius: 0 0 10px 10px;*/
    /*border-color: white;*/
 }
+/*h2 span {
+  margin-top: 200px;
+  padding-bottom: 300px;
+  display: block;
+}*/
 /**/
 
 
 
 /*SPACER*/
 #spaces{
-  height: 30%px;
+  height: 50px;
 }
 /**/
 
+/*CHEVRON ARROW*/
+#down_chevron{
+  position: absolute;
+  width: 100%;
+  top: 94%;
+  text-align: center;
+  /*boe;*/
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.45);
+}
+#down_chevron:focus{
+  border-radius: 0px;
+}
+/**/
+
+/*ABOUT*/
+#about_title{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+.block{
+  border-bottom: 3px solid rgba(15, 15, 15, 1);
+  position: center;
+  margin-left: 49%;
+  width: 3%;
+}
+#about_p{
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  color: #2F2E2E;
+  letter-spacing: normal;
+  line-height: 1.75em;
+  text-align: justify;
+  word-wrap: break-word;
+}
+p.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+br{
+  padding-top: 5px;
+}
+/**/
 
 /*THUMBNAIL CAROUSAL*/
 /* Removes the default 20px margin and creates some padding space for the indicators and controls */
@@ -121,3 +176,87 @@ h2 {
 background: #333333;
 }
 /**/
+
+
+
+
+
+
+
+/*EXTRA
+***************************************************/
+/* Contact Section */
+/*#contact {
+	padding: 100px 0 100px 0;
+}
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
+	height: 38px;
+	padding: 6px 10px;  The 6px vertically centers text on FF, ignored by Webkit
+	background-color: #F5F5F5;
+	border: none;
+	box-shadow: none;
+	box-sizing: border-box;
+	border-radius: 0;
+	outline: none;
+}
+textarea {
+	min-height: 250px;
+}
+input[type="submit"] {
+	display: inline-block;
+	height: 38px;
+	padding: 0 30px;
+	color: #fff;
+	text-align: center;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 38px;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	background: #5fc3e4;
+	border-radius: 0px;
+	border: 0;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+input[type="submit"]:hover {
+	background: #e55d87;
+	text-decoration: none;
+}*/
+/* Footer Section*/
+/*footer {
+	min-height: 120px;
+	padding: 40px 0 40px 0;
+	background: #e55d87;
+	background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+	background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+	background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 );
+	box-sizing: border-box;
+}
+footer p {
+	color: #FFFFFF;
+	margin: 20px 0 0 0;
+}
+.socialIcons {
+	font-size: 34px;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+.icon {
+	padding-right: 10px;
+	color: #FFFFFF;
+}
+.block {
+	width: 70px;
+	height: 2px;
+	background: #e55d87;
+	background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+	background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+	background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+	margin-bottom: 50px;
+}*/
